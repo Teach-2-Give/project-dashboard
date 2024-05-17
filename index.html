@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Project Management Dashboard</h1>
+        </header>
+        <main>
+            <section class="project-form">
+                <h2>Create New Project</h2>
+                <input type="text" id="projectName" placeholder="Project Name">
+                <input type="text" id="projectDescription" placeholder="Project description">
+                <input type="date" id="projectDueDate" placeholder="Due date">
+                <button id="createProject">Create Project</button>
+            </section>
+            <section class="project-list">
+                <h2>Projects</h2>
+                <div id="projects"></div>
+            </section>
+        </main>
+    </div>
+    
+    <template id="projectTemplate">
+        <div class="project">
+            <span class="project-title"></span>
+            <p class="project-due-date"></p>
+            <div class="project-actions">
+                <button class="view-project"><i class="fas fa-eye"></i></button>
+                <button class="delete-project"><i class="fas fa-trash-alt"></i></button>
+                <button class="move-to-trash"><i class="fas fa-archive"></i></button>
+            </div>
+            <div class="description-card"></div>
+        </div>
+    </template>
+    <div id="popup" class="popup">
+        <i class="fas fa-trash-alt"></i>
+        <span id="popup-message"></span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
